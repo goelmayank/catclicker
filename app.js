@@ -17,10 +17,21 @@ $(function(){
 		return title;
 	}
 	
+	var initialCats=[{},{}];
+	
+	
 	var viewModel=function( new Cat()){
-		this.currentCat=ko.observable();
-		this.incrementCounter=function(){
-			this.currentCat().clickCount(this.currentCat().clickCount()+1);
+		var self=this;
+		this.catList=ko.observableArray([]);
+		initialCats.forEach(function(catItem){
+			self.catlist.push( new Cat(catItem));
+		});
+		this.currentCat=ko.observable(this.catList()[0]);
+		self.incrementCounter=function(){
+			self.currentCat().clickCount(self.currentCat().clickCount()+1);
+		}
+		this.setCat = function(clickedCat) {
+			self.currentCat(clickedCat);
 		}
 	};
 	ko.applyBindings(new viewModel());	
