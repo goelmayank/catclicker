@@ -49,7 +49,7 @@ var initialCats=[
 	clickCount: 0,
 	name: 'sleepy',
 	nicknames: ['Zzzzz'],
-
+	imgSrc: 'image5',
 	imgUrl: 'https://cloud.githubusercontent.com/assets/10373048/5804541/c5db9bf6-a02c-11e4-9ead-4380c6897aae.jpg'
 }
 ];
@@ -59,7 +59,7 @@ var viewModel=function( ){
 	var self=this;
 	this.catList=ko.observableArray([]);
 	initialCats.forEach(function(catItem){
-		self.catlist.push( new Cat(catItem));
+		self.catList.push( new Cat(catItem));
 	});
 	this.currentCat=ko.observable(this.catList()[0]);
 	self.incrementCounter=function(){
