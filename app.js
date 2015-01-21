@@ -5,7 +5,7 @@ var Cat= function(data){
 	this.imgSrc=data.imgSrc;
 	this.imgUrl=data.imgUrl;
 
-	this.title=ko.computed(function()){
+	this.title=ko.computed(function(){
 		var title;
 		var clicks=this.clickCount();
 		if(clicks<10)
@@ -16,7 +16,8 @@ var Cat= function(data){
 	},this);
 }
 
-var initialCats=[{
+var initialCats=[
+{
 	clickCount: 0,
 	name: 'blue eyes',
 	nicknames: ['white fur'],
