@@ -8,11 +8,11 @@ var Cat= function(data){
 	this.title=ko.computed(function(){
 		var title;
 		var clicks=this.clickCount();
-		if(clicks<10)
+		if(clicks<10){
 		title="Newborn";
-		else
+		} else
 		title="Popular";
-		return title;
+		} return title;
 	},this);
 }
 
