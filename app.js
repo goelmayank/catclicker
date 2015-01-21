@@ -1,17 +1,17 @@
 var Cat= function(data){
-	this.clickCount=data.clickCount;
-	this.name= data.name;
-	this.nicknames=data.nicknames;
-	this.imgSrc=data.imgSrc;
-	this.imgUrl=data.imgUrl;
+	this.clickCount=ko.observable(data.clickCount);
+	this.name= ko.observable(data.name);
+	this.nicknames=ko.observableArray(data.nicknames);
+	this.imgSrc=ko.observable(data.imgSrc);
+	this.imgUrl=ko.observable(data.imgUrl);
 
 	this.title=ko.computed(function(){
 		var title;
-		var clicks=this.clickCount;
+		var clicks=this.clickCount();
 		if(clicks<10){
-		title="Newborn";
+			title= 'Newborn';
 		} else {
-		title="Popular";
+			title= 'Popular';
 		} return title;
 	},this);
 }
