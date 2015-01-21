@@ -10,7 +10,7 @@ var Cat= function(data){
 		var clicks=this.clickCount();
 		if(clicks<10){
 		title="Newborn";
-		} else
+		} else {
 		title="Popular";
 		} return title;
 	},this);
