@@ -41,7 +41,7 @@ var initialCats=[
 {
 	clickCount: 0,
 	name: 'tiger',
-	nicknames: ['bold']
+	nicknames: ['bold'],
 	imgSrc: 'image4',
 	imgUrl: 'https://cloud.githubusercontent.com/assets/10373048/5804540/c457a266-a02c-11e4-9465-e6d4dcc0a424.jpg'
 },
