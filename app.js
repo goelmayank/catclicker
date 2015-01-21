@@ -7,7 +7,7 @@ var Cat= function(data){
 
 	this.title=ko.computed(function(){
 		var title;
-		var clicks=this.clickCount();
+		var clicks=this.clickCount;
 		if(clicks<10){
 		title="Newborn";
 		} else {
